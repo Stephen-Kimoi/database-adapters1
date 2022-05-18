@@ -20,15 +20,15 @@ cursor.execute ('''
     (1,'question one', True)
 )  
 
-cursor.execute ('''
-   INTSERT INTO table1 (id,description,completed) VALUES (%(id)s,%(description)s,%(completed)s);
-''', 
-    {
+SQL = 'INTSERT INTO table1 (id,description,completed) VALUES (%(id)s,%(description)s,%(completed)s);'
+
+data = {
         'id': 1, 
         'description': 'question two', 
         'completed': False 
-    }
-)
+    }    
+      
+cursor.execute (SQL,data)
 
 cursor.commit()
 connection.close() 
