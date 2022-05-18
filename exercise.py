@@ -13,7 +13,7 @@ cursor.execute ('''
 
 cursor.execute ('''
     INSERT INTO table1 (id,comments) VALUES (1,'it is halfway done'); 
-''') 
+''')  
 
 cursor.commit() 
 cursor.close() 
